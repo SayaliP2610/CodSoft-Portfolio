@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <title>Personal Portfolio</title>
+      <link rel="stylesheet" href="portfolio.css">
+      <script src="https://kit.fontawesome.com/885d011adc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+      <div class="container">
+            <nav>
+                  <aside>
+                        <b>SAYALI</b> 
+                  </aside> 
+                  <ul>
+                        <li><a href="#header"> Home</a></li>
+                        <li><a href="#about"> About</a></li>
+                        <li><a href="#services"> Services</a></li>
+                        <li><a href="#resume"> Resume</a></li>
+                        <li><a href="#contact"> Contact</a></li>
+                  </ul>
+            </nav>
+            <div class="header-text">
+                  <p>Web Developer</p>
+                  <h1> Hi, I'm <span> Sayali Pandharpatte</span><br> From Pune,India</h1>
+            </div>      
+      </div>
+</div><br>
+<div id="about">
+      <div class="container">
+            <div class="row">
+                  <div class="about-col-1">
+                        <img src="Formal.jpg">
+                  </div>
+                  <div class="about-col-2">
+                        <h2 class="sub-title">About Me</h2>
+                        <p class="self">Myself Sayali,I have recently done my Bachelors in Technology with Electronics 
+                              stream from Shivaji University.I'm interested in software and Full-Stack enthusiast and a continuous learner. Did training and
+                              course for 6 months in building web applications using C Programming, CSS, HTML, Mysql, React,
+                              Javascript, Core Java, Advance Java, Hibernate and restful API.</p>
+
+                        <div class="tab-title">
+                              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                              <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                              <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                              <ul>
+                                    <li><span>Web Development</span><br>Build Web Projects</li>
+                                    <li><span>App Development</span><br>IOS Apps</li>
+                                    <li><span>Gaining Internship Experience</span><br>Internship Projects</li>
+                              </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                              <ul>
+                                    <li><span>2023-2024 Current</span><br>Profound Edutech Pvt.Ltd.</li>
+                                    <li><span>2021-2022</span><br>Internship at Protex Technology</li>
+                                    <li><span>Front-End Project</span><br>Building Amazone Clone </li>
+                              </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                              <ul>
+                                    <li><span>2023-2024</span><br>Java Full Stack Training at Profound Edutech</li>
+                                    <li><span>2023</span><br>Bachelors of Technology From Shivaji University</li>
+                                    <li><span>2019</span><br>HSC from DKTE,Ichalkaranji</li>
+                                    <li><span>2017</span><br>SSC from New English School</li>
+                              </ul>
+                        </div>
+                  </div>
+            </div>
+      </div>              
+</div>
+
+<div id="services">
+      <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                  <div>
+                       <h3>Web Design</h3>
+                       <p>design classes can cover the fundamentals of web design and web development it uses CSS.</p>
+                  </div>
+                  <div>
+                       <h3>App Design</h3>
+                       <p>App design can cover the fundamentals of app design and new app development.</p>
+                  </div>
+                  <div>
+                        <h3>Web Application</h3>
+                        <p>It is an application that runs in a browser.It is a combination of a website and a mobile app.</p>
+                  </div>
+            </div>      
+      </div>
+</div>
+
+<div id="resume">
+<div class="container">
+      <h1 class="res-title">Resume</h1>
+      <div>
+             <a href="resume.pdf" download class="btn btn2">Download Resume</a>
+      </div>
+</div>
+</div>
+
+<div id="contact">
+      <div class="container">
+            <div class="row">
+                  <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fa-solid fa-paper-plane"></i>sayalipandharpatte2000@gmail.com</p>
+                        <p><i class="fa-solid fa-phone"></i>+919423768979</p>
+                        <div class="social-icons">
+                              <a href="http://www.linkedin.com/in/dktesayalipandharpatte"><i class="fa-brands fa-linkedin"></i></a>
+                              <a href="sayalipandharpatte2000@gmail.com"><i class="fa-solid fa-paper-plane"></i></a>
+                        </div>
+                  </div>
+                  <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                              <input type="text" name="Name" placeholder="Your Name" required>
+                              <input type="email" name="email" placeholder="Your Email" required>
+                              <textarea name="Message" row="15" placeholder="Your Message"></textarea>
+                              <button type="submit" class="btn btn2">Submit</button>
+                        </form> 
+                        <span id="msg"></span>
+                  </div>
+            </div>
+      </div>
+</div>
+<script>
+      var tablinks=document.getElementsByClassName("tab-links");
+      var tabcontents=document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname)
+      {
+            for(tablink of tablinks)
+            {
+                  tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents)
+            {
+                  tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link"); 
+            document.getElementById(tabname).classList.add("active-tab");    
+                  
+      }
+</script>
+<script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbxmn8onIaUKt0CW9LeDQ4N4X8g8dFuh1EYyNdM5sT4ktEdckEQ_HWxutmsWF6JHCAw/exec'
+      const form = document.forms['submit-to-google-sheet']
+      const msg=document.getElementById("msg")
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            msg.innerHTML="Message send successfully"
+            setTimeout(function(){
+                  msg.innerHTML=""
+            },5000)
+            form.reset()
+          })
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+</body>
+</html>
